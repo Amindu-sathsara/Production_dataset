@@ -1,2 +1,36 @@
 2026-03-23 15:27:15,070 - INFO - Starting parsing process...
 2026-03-23 15:27:15,071 - WARNING - \u26a0\ufe0f No HTML files found in data/raw/. Please run the scraper first.
+2026-03-23 23:49:30,641 - INFO - Starting scraping for 5 crops...
+2026-03-23 23:49:30,666 - INFO - \U0001f504 Processing crop: Beans
+2026-03-23 23:49:51,770 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:49:51,784 - ERROR - \u274c Failed processing Beans: No district checkboxes found.
+2026-03-23 23:49:51,786 - INFO - \U0001f504 Processing crop: Carrot
+2026-03-23 23:50:12,270 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:50:12,280 - ERROR - \u274c Failed processing Carrot: No district checkboxes found.
+2026-03-23 23:50:12,281 - INFO - \U0001f504 Processing crop: Tomato
+2026-03-23 23:50:32,735 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:50:32,743 - ERROR - \u274c Failed processing Tomato: No district checkboxes found.
+2026-03-23 23:50:32,745 - INFO - \U0001f504 Processing crop: Cabbage
+2026-03-23 23:50:53,225 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:50:53,233 - ERROR - \u274c Failed processing Cabbage: No district checkboxes found.
+2026-03-23 23:50:53,234 - INFO - \U0001f504 Processing crop: Beetroot
+2026-03-23 23:51:13,738 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:51:13,747 - ERROR - \u274c Failed processing Beetroot: No district checkboxes found.
+2026-03-23 23:51:15,905 - INFO - \U0001f6d1 Scraping finished.
+2026-03-23 23:55:30,053 - INFO - Starting scraping for 5 crops...
+2026-03-23 23:55:30,072 - INFO - \U0001f504 Processing crop: Beans
+2026-03-23 23:55:51,230 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:55:51,241 - ERROR - \u274c Failed processing Beans: No district checkboxes found.
+2026-03-23 23:55:51,243 - INFO - \U0001f504 Processing crop: Carrot
+2026-03-23 23:56:11,721 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:56:11,730 - ERROR - \u274c Failed processing Carrot: No district checkboxes found.
+2026-03-23 23:56:11,731 - INFO - \U0001f504 Processing crop: Tomato
+2026-03-23 23:56:32,204 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:56:32,214 - ERROR - \u274c Failed processing Tomato: No district checkboxes found.
+2026-03-23 23:56:32,214 - INFO - \U0001f504 Processing crop: Cabbage
+2026-03-23 23:56:52,684 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:56:52,692 - ERROR - \u274c Failed processing Cabbage: No district checkboxes found.
+2026-03-23 23:56:52,693 - INFO - \U0001f504 Processing crop: Beetroot
+2026-03-23 23:57:13,160 - WARNING - \u26a0\ufe0f 'Select All' control not found – falling back to clicking each district checkbox.
+2026-03-23 23:57:13,167 - ERROR - \u274c Failed processing Beetroot: No district checkboxes found.
+2026-03-23 23:57:15,349 - INFO - \U0001f6d1 Scraping finished.
