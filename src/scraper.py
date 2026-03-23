@@ -73,10 +73,52 @@ def scrape_data(headless=True):
                     
                     try:
                         driver.get(URL)
-                        
-                        # Wait for category dropdown
-                        wait.until(EC.presence_of_element_located((By.ID, "optCategory")))
-                        Select(driver.find_element(By.ID, "optCategory")).select_by_visible_text("Up Country Veg")
+
+                        # Wait for category dropdown to be present
+                        wait.until(
+                            EC.presence_of_element_located((By.ID, "optCategory"))
+                        )
+
+                        # Extra wait until the category <select> actually has options
+                        def _category_has_options(d):
+                            try:
+                                elem = d.find_element(By.ID, "optCategory")
+                                return len(Select(elem).options) > 1
+                            except Exception:
+                                return False
+
+                        wait.until(_category_has_options)
+
+                        category_element = driver.find_element(By.ID, "optCategory")
+                        category_select = Select(category_element)
+
+                        # Read all category option texts for logging & matching
+                        category_options = [opt.text.strip() for opt in category_select.options]
+                        logging.info(f"Available categories: {category_options}")
+
+                        # Prefer exact 'Up Country Vegetable' if present
+                        target_category_text = None
+                        for text in category_options:
+                            if text.strip().lower() == "up country vegetable":
+                                target_category_text = text
+                                break
+
+                        # Fallback: any category that contains both 'Up Country' and 'Veg'
+                        if not target_category_text:
+                            for text in category_options:
+                                lower = text.lower()
+                                if "up country" in lower and "veg" in lower:
+                                    target_category_text = text
+                                    break
+
+                        if not target_category_text:
+                            logging.error(
+                                f"Category 'Up Country Vegetable' not found. Available options: {category_options}"
+                            )
+                            pbar.update(1)
+                            continue
+
+                        category_select.select_by_visible_text(target_category_text)
                         
                         # Check Extent and Production if need be
                         try:
@@ -101,9 +143,49 @@ def scrape_data(headless=True):
                             continue
                             
                         Select(crop_dropdown).select_by_visible_text(crop)
-                        
-                        Select(driver.find_element(By.ID, "optFromYear")).select_by_visible_text(str(year))
-                        Select(driver.find_element(By.ID, "optToYear")).select_by_visible_text(str(year))
+
+                        # --- Robust year range selection ---
+
+                        # Wait until the From-year dropdown has real options (JS finished)
+                        def _year_has_options(d):
+                            try:
+                                sel = Select(d.find_element(By.ID, "optFromYear"))
+                                return len(sel.options) > 1
+                            except Exception:
+                                return False
+
+                        wait.until(_year_has_options)
+
+                        from_select = Select(driver.find_element(By.ID, "optFromYear"))
+                        to_select = Select(driver.find_element(By.ID, "optToYear"))
+
+                        from_options = [opt.text.strip() for opt in from_select.options]
+                        to_options = [opt.text.strip() for opt in to_select.options]
+
+                        # Log available years (for debugging)
+                        logging.info(f"From-year options: {from_options}")
+                        logging.info(f"To-year options: {to_options}")
+
+                        year_str = str(year)
+
+                        def _find_year_text(options_list, y):
+                            for text in options_list:
+                                if y in text:
+                                    return text
+                            return None
+
+                        from_text = _find_year_text(from_options, year_str)
+                        to_text = _find_year_text(to_options, year_str)
+
+                        if not from_text or not to_text:
+                            logging.error(
+                                f"❌ Year {year} not found in dropdowns. From options: {from_options}, To options: {to_options}"
+                            )
+                            pbar.update(1)
+                            continue
+
+                        from_select.select_by_visible_text(from_text)
+                        to_select.select_by_visible_text(to_text)
                         
                         # Click Get Table
                         driver.find_element(By.XPATH, "//input[@value='Get Table']").click()
