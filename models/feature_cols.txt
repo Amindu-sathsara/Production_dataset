@@ -1,0 +1,15 @@
+year
+month_sin
+month_cos
+Productio_lag_1
+Productio_lag_2
+Productio_lag_3
+Productio_lag_6
+Productio_lag_12
+Productio_rolling_mean_3
+Productio_rolling_mean_6
+Productio_rolling_mean_12
+harvested
+yield
+Crop_enc
+Dist_enc

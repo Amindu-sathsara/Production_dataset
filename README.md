@@ -39,3 +39,12 @@ python src/main.py --scrape --parse
 ```
 
 The final dataset will be generated efficiently and saved to `data/processed/agricultural_data.xlsx`.
+
+
+preprocess.py
+│   ├── train_model.py
+│   ├── predict.py
+│   ├── utils.py
+│   └── app.py   
+
+are the files that here I just used to do this tasks to create product prediction
