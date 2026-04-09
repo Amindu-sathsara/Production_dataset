@@ -66,6 +66,106 @@ class ProductionPredictor:
         }
         last_date = sub['date'].max()
         return lags, rolling, last_date
+
+    def iterative_forecast(self, year, month_name, crop_name, district_name):
+        """Forecast by rolling the series forward month-by-month.
+
+        This uses the last real observation as a starting point and then
+        repeatedly calls the model, feeding each prediction back into the
+        lag/rolling features. As the horizon grows, the lagged values change,
+        so predictions for the same month will differ across years.
+        """
+        month_num_target = MONTH_MAP[month_name]
+
+        sub = self.full_df[(self.full_df['Crop_nam'] == crop_name) &
+                           (self.full_df['Location_district'] == district_name)].copy()
+        if sub.empty:
+            raise ValueError(f"No historical data for {crop_name} in {district_name}.")
+
+        # Encode crop and district once
+        crop_enc = self.le_crop.transform([crop_name])[0]
+        dist_enc = self.le_dist.transform([district_name])[0]
+
+        # Average harvested area and yield for this crop-district (kept constant)
+        harvested = sub['harvested'].mean() if 'harvested' in sub.columns else 0
+        yield_val = sub['yield'].mean() if 'yield' in sub.columns else 0
+
+        # Prepare time index from last known date up to target
+        if 'month_num' not in sub.columns:
+            if 'month' in sub.columns and sub['month'].dtype == object:
+                sub['month_num'] = sub['month'].map(MONTH_MAP)
+            else:
+                sub['month_num'] = sub['month']
+        sub['date'] = pd.to_datetime(
+            sub['year'].astype(str) + '-' + sub['month_num'].astype(str) + '-01'
+        )
+        sub = sub.sort_values('date')
+
+        last_real_date = sub['date'].max()
+        target_date = pd.to_datetime(f"{year}-{month_num_target:02d}-01")
+        if target_date <= last_real_date:
+            # If asking inside historical range, just take actual value
+            hist_row = sub[sub['date'] == target_date]
+            if not hist_row.empty:
+                return float(hist_row['Productio'].iloc[0])
+
+        # Use last 12 real values as starting history
+        history = sub['Productio'].tolist()
+        dates = pd.date_range(start=last_real_date, end=target_date, freq='MS')
+        # dates includes last_real_date; we want to start forecasting from next month
+        future_dates = dates[1:]
+
+        forecast_value = None
+        for d in future_dates:
+            month_num = d.month
+            month_sin = np.sin(2 * np.pi * month_num / 12)
+            month_cos = np.cos(2 * np.pi * month_num / 12)
+
+            # Build lags and rolling means from current history
+            prod_array = np.array(history)
+            lag_values = {}
+            for lag in [1, 2, 3, 6, 12]:
+                if len(prod_array) >= lag:
+                    lag_values[f'Productio_lag_{lag}'] = float(prod_array[-lag])
+                else:
+                    lag_values[f'Productio_lag_{lag}'] = 0.0
+
+            rolling_values = {}
+            for win in [3, 6, 12]:
+                if len(prod_array) >= win:
+                    rolling_values[f'Productio_rolling_mean_{win}'] = float(prod_array[-win:].mean())
+                elif len(prod_array) > 0:
+                    rolling_values[f'Productio_rolling_mean_{win}'] = float(prod_array.mean())
+                else:
+                    rolling_values[f'Productio_rolling_mean_{win}'] = 0.0
+
+            input_dict = {
+                'year': d.year,
+                'month_sin': month_sin,
+                'month_cos': month_cos,
+                **lag_values,
+                **rolling_values,
+                'harvested': harvested,
+                'yield': yield_val,
+                'Crop_enc': crop_enc,
+                'Dist_enc': dist_enc
+            }
+
+            input_df = pd.DataFrame([input_dict])[self.feature_cols]
+            numeric_cols = ['year', 'month_sin', 'month_cos', 'harvested', 'yield']
+            input_df[numeric_cols] = self.scaler.transform(input_df[numeric_cols])
+
+            y_pred = self.model.predict(input_df)[0]
+            y_pred = max(0, float(y_pred))
+            forecast_value = y_pred
+
+            # Append prediction to history for next step
+            history.append(y_pred)
+
+        if forecast_value is None:
+            raise RuntimeError("Forecast horizon is empty; check target date.")
+
+        return forecast_value
     
     def predict(self, year, month_name, crop_name, district_name, use_last_known=True):
         month_num = MONTH_MAP[month_name]
@@ -123,16 +223,21 @@ class ProductionPredictor:
         return max(0, pred)  # production cannot be negative
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python predict.py <year> <month> <crop> <district>")
-        print("Example: python predict.py 2026 June Cabbage Badulla")
+    if len(sys.argv) not in (5, 6):
+        print("Usage: python predict.py <year> <month> <crop> <district> [iter]")
+        print("Example: python predict.py 2026 June Cabbage Badulla iter")
         sys.exit(1)
-    
+
     year = int(sys.argv[1])
     month = sys.argv[2]
     crop = sys.argv[3]
     district = sys.argv[4]
-    
+    use_iterative = len(sys.argv) == 6 and sys.argv[5].lower() == "iter"
+
     predictor = ProductionPredictor()
-    pred = predictor.predict(year, month, crop, district, use_last_known=True)
-    print(f"Predicted production for {crop} in {district}, {month} {year}: {pred:.2f}")
+    if use_iterative:
+        pred = predictor.iterative_forecast(year, month, crop, district)
+        print(f"Iterative-forecast production for {crop} in {district}, {month} {year}: {pred:.2f}")
+    else:
+        pred = predictor.predict(year, month, crop, district, use_last_known=True)
+        print(f"Predicted production for {crop} in {district}, {month} {year}: {pred:.2f}")
