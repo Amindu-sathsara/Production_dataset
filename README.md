@@ -47,4 +47,22 @@ preprocess.py
 │   ├── utils.py
 │   └── app.py   
 
-are the files that here I just used to do this tasks to create product prediction
+are the files that here I just used to do this tasks to create product prediction\
+
+
+
+#To run and see the predictions in actions 
+
+To use the ARIMA / SARIMA / Prophet results interactively by entering year, month, crop, and district, use the ts_forecasts.predict script.
+
+From your src folder:
+
+cd C:\Users\HP\Desktop\production\src
+python -m ts_forecasts.predict 2027 June Cabbage Anuradhapura
+
+
+python -m ts_forecasts.predict <year> <month> <crop> <district>
+
+python -m ts_forecasts.predict 2026 June Cabbage Anuradhapura
+python -m ts_forecasts.predict 2026 January Beans Badulla
+python -m ts_forecasts.predict 2030 March Tomatoes Kandy

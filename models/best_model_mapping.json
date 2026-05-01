@@ -1,0 +1,627 @@
+{
+    "Beans_Ampara": {
+        "best_model": "Random Forest",
+        "mae": 3.472922181112357,
+        "accuracy": 0.0
+    },
+    "Beans_Vavuniya": {
+        "best_model": "XGBoost",
+        "mae": 4.308225618247633,
+        "accuracy": 82.36105064812169
+    },
+    "Beans_Trincomalee": {
+        "best_model": "XGBoost",
+        "mae": 1.8275220742932075,
+        "accuracy": 0.0
+    },
+    "Beans_Badulla": {
+        "best_model": "Linear Regression",
+        "mae": 67.25576710899716,
+        "accuracy": 97.77029034325857
+    },
+    "Beans_Mannar": {
+        "best_model": "Random Forest",
+        "mae": 3.4206010227644654,
+        "accuracy": 40.64333630690125
+    },
+    "Beans_Galle": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beans_Polonnaruwa": {
+        "best_model": "Random Forest",
+        "mae": 3.1183348752698974,
+        "accuracy": 6.340160197629686
+    },
+    "Beans_Anuradhapura": {
+        "best_model": "Linear Regression",
+        "mae": 6.463108144005669,
+        "accuracy": 91.80962780180657
+    },
+    "Beans_Matara": {
+        "best_model": "Random Forest",
+        "mae": 1.8936372899982645,
+        "accuracy": 60.284426094191176
+    },
+    "Beans_Kegalle": {
+        "best_model": "Random Forest",
+        "mae": 5.294438367921208,
+        "accuracy": 67.8005313918172
+    },
+    "Beans_Colombo": {
+        "best_model": "XGBoost",
+        "mae": 1.904935895734363,
+        "accuracy": 0.0
+    },
+    "Beans_Puttalam": {
+        "best_model": "XGBoost",
+        "mae": 2.0952551268868977,
+        "accuracy": 0.0
+    },
+    "Beans_Mullativu": {
+        "best_model": "XGBoost",
+        "mae": 3.370714720752504,
+        "accuracy": 70.20714614397664
+    },
+    "Beans_Matale": {
+        "best_model": "Linear Regression",
+        "mae": 17.60675274185177,
+        "accuracy": 96.5077860013183
+    },
+    "Beans_Batticaloa": {
+        "best_model": "XGBoost",
+        "mae": 6.415510324968232,
+        "accuracy": 0.0
+    },
+    "Beans_Ratnapura": {
+        "best_model": "Linear Regression",
+        "mae": 12.179091057669366,
+        "accuracy": 96.67012000679438
+    },
+    "Beans_Kilinochchi": {
+        "best_model": "Random Forest",
+        "mae": 6.980580456481213,
+        "accuracy": 0.0
+    },
+    "Beans_Kurunegala": {
+        "best_model": "XGBoost",
+        "mae": 4.77724301373517,
+        "accuracy": 86.88900682706424
+    },
+    "Beans_Kaluthara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beans_Hanbantota": {
+        "best_model": "Random Forest",
+        "mae": 6.840822114427445,
+        "accuracy": 0.0
+    },
+    "Beans_Nuwara Eliya": {
+        "best_model": "Linear Regression",
+        "mae": 104.67342887369443,
+        "accuracy": 96.67570665645675
+    },
+    "Beans_Kandy": {
+        "best_model": "Linear Regression",
+        "mae": 32.59126628601793,
+        "accuracy": 95.12410336740521
+    },
+    "Beans_Monaragala": {
+        "best_model": "XGBoost",
+        "mae": 5.665327273474801,
+        "accuracy": 87.23553032701125
+    },
+    "Beans_Gampaha": {
+        "best_model": "XGBoost",
+        "mae": 3.5929659373230396,
+        "accuracy": 0.0
+    },
+    "Beans_Jaffna": {
+        "best_model": "Random Forest",
+        "mae": 4.4467762853809205,
+        "accuracy": 82.28073979674568
+    },
+    "Tomatoes_Ampara": {
+        "best_model": "Linear Regression",
+        "mae": 4.5196344445035015,
+        "accuracy": 97.61204927270991
+    },
+    "Tomatoes_Vavuniya": {
+        "best_model": "Linear Regression",
+        "mae": 4.656030513069978,
+        "accuracy": 91.7560776392773
+    },
+    "Tomatoes_Trincomalee": {
+        "best_model": "Linear Regression",
+        "mae": 3.4495182738908188,
+        "accuracy": 92.97142691628854
+    },
+    "Tomatoes_Badulla": {
+        "best_model": "Linear Regression",
+        "mae": 36.5168776175607,
+        "accuracy": 97.2196290273971
+    },
+    "Tomatoes_Mannar": {
+        "best_model": "Linear Regression",
+        "mae": 3.504904489854341,
+        "accuracy": 89.3015858884236
+    },
+    "Tomatoes_Galle": {
+        "best_model": "Linear Regression",
+        "mae": 5.910039807363071,
+        "accuracy": 73.48350136725145
+    },
+    "Tomatoes_Polonnaruwa": {
+        "best_model": "Linear Regression",
+        "mae": 3.8220492028145836,
+        "accuracy": 85.17905241129185
+    },
+    "Tomatoes_Anuradhapura": {
+        "best_model": "Linear Regression",
+        "mae": 16.96767732505863,
+        "accuracy": 96.45165437969554
+    },
+    "Tomatoes_Matara": {
+        "best_model": "Linear Regression",
+        "mae": 3.7214911395861754,
+        "accuracy": 88.8214746406842
+    },
+    "Tomatoes_Kegalle": {
+        "best_model": "Linear Regression",
+        "mae": 3.807096384269943,
+        "accuracy": 87.81403177026911
+    },
+    "Tomatoes_Colombo": {
+        "best_model": "Random Forest",
+        "mae": 3.4343526720780813,
+        "accuracy": 38.946974494255606
+    },
+    "Tomatoes_Puttalam": {
+        "best_model": "Linear Regression",
+        "mae": 3.0354287373714275,
+        "accuracy": 96.4504899352839
+    },
+    "Tomatoes_Mullativu": {
+        "best_model": "Linear Regression",
+        "mae": 7.740122531960967,
+        "accuracy": 96.22949719563258
+    },
+    "Tomatoes_Matale": {
+        "best_model": "Linear Regression",
+        "mae": 46.343947726765435,
+        "accuracy": 95.71218375650528
+    },
+    "Tomatoes_Batticaloa": {
+        "best_model": "Linear Regression",
+        "mae": 4.801842484703322,
+        "accuracy": 89.92920234808679
+    },
+    "Tomatoes_Ratnapura": {
+        "best_model": "Linear Regression",
+        "mae": 13.918142060730048,
+        "accuracy": 97.02253543064931
+    },
+    "Tomatoes_Kilinochchi": {
+        "best_model": "Linear Regression",
+        "mae": 4.147941382569088,
+        "accuracy": 97.91953629531304
+    },
+    "Tomatoes_Kurunegala": {
+        "best_model": "Linear Regression",
+        "mae": 12.535435022418087,
+        "accuracy": 96.58629840464177
+    },
+    "Tomatoes_Kaluthara": {
+        "best_model": "Linear Regression",
+        "mae": 4.835285391786915,
+        "accuracy": 76.65741832583323
+    },
+    "Tomatoes_Hanbantota": {
+        "best_model": "Linear Regression",
+        "mae": 18.728824614340425,
+        "accuracy": 96.99376317533198
+    },
+    "Tomatoes_Nuwara Eliya": {
+        "best_model": "Linear Regression",
+        "mae": 103.55836673727228,
+        "accuracy": 96.05264328709592
+    },
+    "Tomatoes_Kandy": {
+        "best_model": "Linear Regression",
+        "mae": 35.02618462719329,
+        "accuracy": 96.07794569470482
+    },
+    "Tomatoes_Monaragala": {
+        "best_model": "Linear Regression",
+        "mae": 9.429852038363212,
+        "accuracy": 95.96296735026047
+    },
+    "Tomatoes_Gampaha": {
+        "best_model": "Linear Regression",
+        "mae": 4.485613184695591,
+        "accuracy": 90.61853868673762
+    },
+    "Tomatoes_Jaffna": {
+        "best_model": "Linear Regression",
+        "mae": 6.226911246455352,
+        "accuracy": 96.98399679527597
+    },
+    "Carrot_Ampara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Vavuniya": {
+        "best_model": "XGBoost",
+        "mae": 4.467074119382435,
+        "accuracy": 0.0
+    },
+    "Carrot_Trincomalee": {
+        "best_model": "XGBoost",
+        "mae": 5.272624803582827,
+        "accuracy": 0.0
+    },
+    "Carrot_Badulla": {
+        "best_model": "Linear Regression",
+        "mae": 48.882396291628986,
+        "accuracy": 96.85396872343979
+    },
+    "Carrot_Mannar": {
+        "best_model": "XGBoost",
+        "mae": 2.1714156915744147,
+        "accuracy": 0.0
+    },
+    "Carrot_Galle": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Polonnaruwa": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Anuradhapura": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Matara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Kegalle": {
+        "best_model": "XGBoost",
+        "mae": 2.203823098981822,
+        "accuracy": 0.0
+    },
+    "Carrot_Colombo": {
+        "best_model": "XGBoost",
+        "mae": 2.1964156915744146,
+        "accuracy": 0.0
+    },
+    "Carrot_Puttalam": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Mullativu": {
+        "best_model": "Random Forest",
+        "mae": 3.5384976076275674,
+        "accuracy": 19.847008706864784
+    },
+    "Carrot_Matale": {
+        "best_model": "Linear Regression",
+        "mae": 4.959105897827108,
+        "accuracy": 0.0
+    },
+    "Carrot_Batticaloa": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Ratnapura": {
+        "best_model": "Linear Regression",
+        "mae": 4.205337051657043,
+        "accuracy": 0.0
+    },
+    "Carrot_Kilinochchi": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Kurunegala": {
+        "best_model": "XGBoost",
+        "mae": 2.4341443019884608,
+        "accuracy": 0.0
+    },
+    "Carrot_Kaluthara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Hanbantota": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Nuwara Eliya": {
+        "best_model": "Linear Regression",
+        "mae": 219.35870452024147,
+        "accuracy": 96.94269069296776
+    },
+    "Carrot_Kandy": {
+        "best_model": "Linear Regression",
+        "mae": 8.054397222385287,
+        "accuracy": 91.67246016840859
+    },
+    "Carrot_Monaragala": {
+        "best_model": "Linear Regression",
+        "mae": 1.1771283368128567,
+        "accuracy": 66.8426928749873
+    },
+    "Carrot_Gampaha": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Carrot_Jaffna": {
+        "best_model": "Linear Regression",
+        "mae": 3.945593776662646,
+        "accuracy": 96.42406465992248
+    },
+    "Beetroot_Ampara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Vavuniya": {
+        "best_model": "Linear Regression",
+        "mae": 6.0119258732323155,
+        "accuracy": 0.0
+    },
+    "Beetroot_Trincomalee": {
+        "best_model": "XGBoost",
+        "mae": 2.3710167586803443,
+        "accuracy": 0.0
+    },
+    "Beetroot_Badulla": {
+        "best_model": "Linear Regression",
+        "mae": 22.174477615825015,
+        "accuracy": 95.14872417969812
+    },
+    "Beetroot_Mannar": {
+        "best_model": "XGBoost",
+        "mae": 5.002049249631388,
+        "accuracy": 0.0
+    },
+    "Beetroot_Galle": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Polonnaruwa": {
+        "best_model": "XGBoost",
+        "mae": 5.351485341345823,
+        "accuracy": 0.0
+    },
+    "Beetroot_Anuradhapura": {
+        "best_model": "XGBoost",
+        "mae": 5.675668984872321,
+        "accuracy": 64.99044564201932
+    },
+    "Beetroot_Matara": {
+        "best_model": "XGBoost",
+        "mae": 8.712615059481728,
+        "accuracy": 0.0
+    },
+    "Beetroot_Kegalle": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Colombo": {
+        "best_model": "XGBoost",
+        "mae": 2.2149235755205154,
+        "accuracy": 0.0
+    },
+    "Beetroot_Puttalam": {
+        "best_model": "Linear Regression",
+        "mae": 50.17253495622614,
+        "accuracy": 97.38904042174843
+    },
+    "Beetroot_Mullativu": {
+        "best_model": "Linear Regression",
+        "mae": 1.3317735277215133,
+        "accuracy": 84.30198287229734
+    },
+    "Beetroot_Matale": {
+        "best_model": "Linear Regression",
+        "mae": 15.607924924203505,
+        "accuracy": 91.39600761642922
+    },
+    "Beetroot_Batticaloa": {
+        "best_model": "Random Forest",
+        "mae": 7.918867642790281,
+        "accuracy": 0.0
+    },
+    "Beetroot_Ratnapura": {
+        "best_model": "Random Forest",
+        "mae": 3.8975132099968133,
+        "accuracy": 6.799815875625427
+    },
+    "Beetroot_Kilinochchi": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Kurunegala": {
+        "best_model": "Linear Regression",
+        "mae": 7.5725364480314346,
+        "accuracy": 91.4453416932354
+    },
+    "Beetroot_Kaluthara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Hanbantota": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Nuwara Eliya": {
+        "best_model": "Linear Regression",
+        "mae": 49.80858855827327,
+        "accuracy": 95.28044466682442
+    },
+    "Beetroot_Kandy": {
+        "best_model": "XGBoost",
+        "mae": 2.61770104125694,
+        "accuracy": 89.15447418045436
+    },
+    "Beetroot_Monaragala": {
+        "best_model": "Linear Regression",
+        "mae": 4.73436802931164,
+        "accuracy": 0.0
+    },
+    "Beetroot_Gampaha": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Beetroot_Jaffna": {
+        "best_model": "Linear Regression",
+        "mae": 5.370914177252837,
+        "accuracy": 97.65155133842312
+    },
+    "Cabbage_Ampara": {
+        "best_model": "Random Forest",
+        "mae": 7.657767504417265,
+        "accuracy": 0.0
+    },
+    "Cabbage_Vavuniya": {
+        "best_model": "Linear Regression",
+        "mae": 6.679120880373589,
+        "accuracy": 79.04979666571919
+    },
+    "Cabbage_Trincomalee": {
+        "best_model": "Random Forest",
+        "mae": 7.2034449206891145,
+        "accuracy": 0.0
+    },
+    "Cabbage_Badulla": {
+        "best_model": "Linear Regression",
+        "mae": 61.241476546430626,
+        "accuracy": 96.54059208477914
+    },
+    "Cabbage_Mannar": {
+        "best_model": "Random Forest",
+        "mae": 5.235894489241726,
+        "accuracy": 0.0
+    },
+    "Cabbage_Galle": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Cabbage_Polonnaruwa": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Cabbage_Anuradhapura": {
+        "best_model": "Linear Regression",
+        "mae": 5.795485386056261,
+        "accuracy": 87.41064642781207
+    },
+    "Cabbage_Matara": {
+        "best_model": "Random Forest",
+        "mae": 7.09469355983869,
+        "accuracy": 0.0
+    },
+    "Cabbage_Kegalle": {
+        "best_model": "Linear Regression",
+        "mae": 2.5653980854802665,
+        "accuracy": 0.0
+    },
+    "Cabbage_Colombo": {
+        "best_model": "XGBoost",
+        "mae": 1.7072921639239345,
+        "accuracy": 0.0
+    },
+    "Cabbage_Puttalam": {
+        "best_model": "Linear Regression",
+        "mae": 29.37770037626073,
+        "accuracy": 98.4308214217412
+    },
+    "Cabbage_Mullativu": {
+        "best_model": "Linear Regression",
+        "mae": 3.460578082985814,
+        "accuracy": 90.19322630079152
+    },
+    "Cabbage_Matale": {
+        "best_model": "Linear Regression",
+        "mae": 17.080917532673507,
+        "accuracy": 94.98304756123832
+    },
+    "Cabbage_Batticaloa": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Cabbage_Ratnapura": {
+        "best_model": "Random Forest",
+        "mae": 11.000137486128358,
+        "accuracy": 81.15463676272215
+    },
+    "Cabbage_Kilinochchi": {
+        "best_model": "Random Forest",
+        "mae": 5.519469345370101,
+        "accuracy": 29.282324385250377
+    },
+    "Cabbage_Kurunegala": {
+        "best_model": "Random Forest",
+        "mae": 4.160241955895462,
+        "accuracy": 30.707415313809037
+    },
+    "Cabbage_Kaluthara": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Cabbage_Hanbantota": {
+        "best_model": "XGBoost",
+        "mae": 2.2130823582410812,
+        "accuracy": 100.0
+    },
+    "Cabbage_Nuwara Eliya": {
+        "best_model": "Linear Regression",
+        "mae": 340.1527108655987,
+        "accuracy": 95.39287654907406
+    },
+    "Cabbage_Kandy": {
+        "best_model": "Linear Regression",
+        "mae": 26.301324525366912,
+        "accuracy": 95.16789428763276
+    },
+    "Cabbage_Monaragala": {
+        "best_model": "Linear Regression",
+        "mae": 2.8588792877809506,
+        "accuracy": 54.68235292259267
+    },
+    "Cabbage_Gampaha": {
+        "best_model": "XGBoost",
+        "mae": 1.9602363926393016,
+        "accuracy": 0.0
+    },
+    "Cabbage_Jaffna": {
+        "best_model": "Linear Regression",
+        "mae": 2.628075158311649,
+        "accuracy": 96.6656418004769
+    }
+}
